@@ -4,16 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        button{
+            margin-top: 2%;
+        }
+        @media (max-width: 800px){
+       
+
+        
+            textarea{
+              
+                border: 1px solid black;
+               height :200px;
+               padding: 2%;
+               margin-right: 2%;
+               padding-left:2%;
+               margin-left: 2%;
+width:35%;
+margin-bottom: 7%;
+
+            }
+            #re{
+                margin-top: 2%;
+                margin-left: 5%;
+                margin-bottom: 2%;
+            }
+            #re button{
+                margin-top: 5%;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <h1>Enter your text here</h1>
-    <textarea name="" id="t1" cols="90" rows="32"></textarea>
+    <textarea name="" id="t1" cols="90" rows="28"></textarea>
     &nbsp;&nbsp;&nbsp;
-    <textarea name="" id="t2" cols="90" rows="32"></textarea>
+    <textarea name="" id="t2" cols="90" rows="28"></textarea>
     <br>
+    <div id="re">
     <button onclick="up()">Upper Case</button>  &nbsp;
     <button onclick="lo()">Lower Case</button>  &nbsp;
     <button onclick="or()">Original</button>
+</div>
+
 
 
     <script>
