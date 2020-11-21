@@ -26,9 +26,7 @@ ul{
     transition: 1s ease;
     border:1px solid transparent;
     letter-spacing: 3px;
-   
-
-}
+   }
 #nav li:hover{
     color:black;
     background-color: white;
@@ -45,11 +43,11 @@ ul{
     font-size: 2.5rem;
     color:white;
     display: block;
-    height: 760px;
+    height: 788px;
     width: 100%;
     background-image: url(bk.jpg);
-
 }
+
 #main .write{
   
     margin: 7.3% 10% 4.8% 10%;
@@ -134,12 +132,13 @@ padding:4% 0% 2% 0%;
     width:87%;
     font-size: 3.7rem;
     padding-left: 2rem;
-    
-}
+    }
+
 #project ul{
 margin-top: 1%;
 padding-bottom: 2%;
 }
+
 #project li{
 padding-top: 3px;
 padding-bottom: 3px;
@@ -347,7 +346,7 @@ padding-bottom: 4px;
 
 
 
-@media (max-width:700px)
+@media (max-width:780px)
 {
 
     #main .write{
@@ -375,3 +374,113 @@ padding-bottom: 4px;
 
 
 }
+}
+
+@media (max-width:500px)
+{
+    h1,h2{
+        font-size: 2.1rem;
+    }
+
+    .f1{
+        font-size: 1.4rem;
+    }
+
+    ul li{
+        font-size: 1.3rem;
+    }
+
+    #main .write{
+        padding-top:11%;
+        padding-bottom: 17%;
+        margin: 0 10%;
+        font-size: 2.5rem;
+        word-spacing: 16px;
+        letter-spacing: 7px;
+        color:white;
+        text-align: center;
+        font-family: "Sacramento", cursive; ;
+    }
+
+    #nav li{
+        font-size: 0.8rem;
+    }
+    #skills h1{
+        width:77.5%;
+            }
+
+            #skills table,td,tr{
+                /* margin-left: 20%; */
+                font-size: 1.2rem;
+                letter-spacing: 2.3px;
+                margin:2% auto;
+                border: 1px solid black;
+                padding: 3.5px;
+                padding-left: 8px;
+            
+                
+                /* text-align: center; */
+            }
+
+    #achievements h1{
+        width: 93.8%;
+    }
+    #hobbies h1{
+        width:92.5%;
+    }
+
+}
+
+
+
+@media (max-width:300px){
+
+    li{
+        font-size: 1.0rem;
+    }
+
+    h1,h2{
+        font-size: 2rem;
+    }
+
+
+    #main .write{
+        padding-top:11%;
+        padding-bottom: 6%;
+        margin: 0 10%;
+        font-size: 2.5rem;
+        word-spacing: 16px;
+        letter-spacing: 7px;
+        color:white;
+        text-align: center;
+        font-family: "Sacramento", cursive; ;
+    }
+
+    #nav li{
+        font-size: 0.8rem;
+    }
+    #skills h1{
+        width:77.5%;
+            }
+
+    #skills table,td,tr{
+                /* margin-left: 20%; */
+                font-size: 1.1rem;
+                letter-spacing: 2.1px;
+                margin:1% auto;
+                border: 1px solid black;
+                padding: 3.3px;
+                padding-left: 8px;
+            
+                
+                /* text-align: center; */
+      }
+
+    #achievements h1{
+        width: 93.8%;
+    }
+    #hobbies h1{
+        width:92.5%;
+    }
+
+  }
