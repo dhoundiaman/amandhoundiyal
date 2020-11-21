@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding-top: 60px;
+            text-align:center;
+        }
+        h1{
+            padding-top:30px ;
+        }
+        h2{
+            border:2px solid green;
+            display: inline-block;
+            color:darkgray;
+            padding:20px ;
+            line-height: 1.5;
+            font-family: serif;
+            font-size:26px;
+        }
+        #dig{
+            font-size:26px;
+        }
+    
+    </style>
+</head>
+<body>
+
+<h1>Enter the number of digits in OTP</h1>
+<textarea name="" id="dig" cols="30" rows="2"></textarea>
+<button onclick="generate()">Generate OTP</button>
+<h1>Otp</h1>
+<h2 id="print">Here's your OTP</h2>
+<script>
+    function generate()
+    {
+        var d=document.getElementById("dig").value;
+        var i;
+        var otp="";
+        for(i=1;i<=d;i++)
+        {
+           otp=otp+""+Math.floor(Math.random()*10);
+        }
+        document.getElementById("print").innerText=otp;
+        document.getElementById("print").style.color="red";
+
+    }
+</script>
+</body>
+</html>

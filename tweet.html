@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write your code till 20 characters</h1>
+
+    <br>
+    <br>
+    <p style="color:green; font-size:21px;" id="f">Characters left = 20</p>
+    <textarea name="v" id="txt" cols="40" rows="8"></textarea>
+</body>
+<script>
+    var aler=0;
+    setInterval(fn,90);
+    function fn()
+    {
+        console.log("likha");
+    tweet=document.getElementById("txt").value;
+    console.log(tweet);
+    var l=tweet.length;
+    if(l>=20)
+    {
+        document.getElementById("f").style.color="red";
+        aler++;
+        if(aler==1)
+        {
+        alert("You have exceeded the limit");
+        aler++;
+        }
+
+    }
+    else
+    {
+        aler=0;
+        document.getElementById("f").style.color="green";   
+    }
+    document.getElementById("f").innerText="Characters left ="+(20-l);
+    }
+</script>
+</html>

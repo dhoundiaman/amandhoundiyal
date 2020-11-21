@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter your text here</h1>
+    <textarea name="" id="t1" cols="90" rows="32"></textarea>
+    &nbsp;&nbsp;&nbsp;
+    <textarea name="" id="t2" cols="90" rows="32"></textarea>
+    <br>
+    <button onclick="up()">Upper Case</button>  &nbsp;
+    <button onclick="lo()">Lower Case</button>  &nbsp;
+    <button onclick="or()">Original</button>
+
+
+    <script>
+        var orig;
+        function up()
+        {
+            orig=document.getElementById("t1").value;
+            var modified=orig.toUpperCase();
+            document.getElementById("t2").innerText=modified;
+            console.log("ye raha"+orig+" "+modified)
+
+        }
+        function lo()
+        {
+            orig=document.getElementById("t1").value;
+            var modified=orig.toLowerCase();
+            document.getElementById("t2").innerText=modified;
+        }
+
+        function or()
+        {
+            if(orig==undefined)
+            {
+                orig=document.getElementById("t1").value;
+            }
+            var modified=orig;
+            document.getElementById("t2").innerText=modified;
+
+        }
+
+
+    </script>
+</body>
+</html>

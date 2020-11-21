@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color:rgb(51, 51, 51) ;
+            letter-spacing: 1px;
+           
+        }
+        button{
+            padding: 1.2% 4.3%;
+            margin: 0.8%;
+            font-size:22px;
+            /* color:rgb(0,230,57); */
+            color:rgb(68, 107, 28);
+            font-weight:bold;
+            background-color: #77e693;
+        }
+        textarea{
+            font-size:32px;
+            background-color:#77e693;
+        }
+        div{
+            border:1px solid green;
+            display: block;
+            margin: 0.1% 12%;
+            background-color:rgb(5, 5, 4) ;
+        }
+        span{
+            font-size:18px;
+            color:rgb(0,230,57);
+            font-weight: bold;
+            
+        }
+        h1{
+            color:rgb(0,230,57);
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Welcome to Aman's Calculator</h1>
+    <span>Query</span> &nbsp;
+    <textarea name="" id="query" cols="34" rows="1"></textarea>
+    <br><br>
+    <span>Result</span> &nbsp;
+    <textarea name="" id="result" disabled cols="34" rows="1"></textarea>
+    <br>
+    <br>
+    <button value="1" onclick="quer('1')" id="one">1</button>
+    <button value="2" onclick="quer('2')" id="two">2</button>
+    <button value="3" onclick="quer('3')" id="three">3</button>
+    <button value="." onclick="quer('.')" id="dot"> .</button>
+    <br>
+    <button value="4" onclick="quer('4')" id="four">4</button>
+    <button value="5" onclick="quer('5')" id="five">5</button>
+    <button value="6" onclick="quer('6')" id="six">6</button>
+    <button value="(" onclick="quer('(')" id="open">(</button>
+    <br>
+    <button value="7" onclick="quer('7')" id="seven">7</button>
+    <button value="8" onclick="quer('8')" id="eight">8</button>
+    <button value="9" onclick="quer('9')" id="nine">9</button>
+    <button value=")" onclick="quer(')')" id="close">)</button>
+    <br>
+    <br>
+    <button value="0" onclick="quer('0')" id="zero">0</button>
+    <button value="+" onclick="quer('+')" id="plus">+</button>
+    <button value="-" onclick="quer('-')" id="minus">-</button>
+    <button value="*" onclick="quer('*')" id="multiply">x</button>
+    <button value="/" onclick="quer('/')" id="divide">/</button>
+    
+    <br>
+    <button onclick="backspace()" id="backspace">Backspace</button>
+    <button onclick="result()">=</button>
+    <button onclick="reset()">Reset</button>
+</div>
+
+<script>
+    var a="";
+    var r="";
+    setInterval(set,90);
+    function set()
+    {
+        a=document.getElementById("query").value;
+        console.log("this");
+        console.log(document.getElementById("query").value);
+    }
+
+    function quer(s)
+    {
+        a=a+s;
+        document.getElementById("query").value=a;
+        document.getElementById("query").value=a;
+    }
+function reset()
+{
+    a="";
+    r="";
+        document.getElementById("query").value=a;
+        //document.getElementById("query").innerHTML=a;
+        document.getElementById("result").value=r;
+        //document.getElementById("result").innerHTML="";
+
+
+}
+function result()
+{
+    var r=eval(document.getElementById("query").value);
+
+    document.getElementById("result").value=r;
+}
+function backspace()
+{
+    if(a.length!=0)
+    {
+        a=a.slice(0,a.length-1)
+        document.getElementById("query").value=a;
+        document.getElementById("result").value="";
+
+    }
+
+}
+    
+</script>
+</body>
+</html>
