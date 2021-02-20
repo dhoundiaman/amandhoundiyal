@@ -483,9 +483,16 @@
     var counter2=0;
     var first2=0;
     var wait=0;
-    chance=1;
+    var chance=1;
+    var winner=0;
 
     function dice1(){
+        
+        if(winner==1)
+        {
+            return;
+        }
+        
         if(chance==2)
         {
             document.getElementById("winner").classList.remove("pink");
@@ -616,6 +623,12 @@
 
         
     function dice2(){
+        
+        if(winner==1)
+        {
+            return;
+        }
+        
         if(chance==1)
         {
             document.getElementById("winner").classList.remove("pink");
