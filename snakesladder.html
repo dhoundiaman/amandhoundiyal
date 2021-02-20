@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>
+            Snakes and Ladders
+        </title>
+
+        <style>
+
+            h1{
+                font-family: 'Courier New', Courier, monospace;
+                margin: auto auto;
+                text-justify: auto;
+                margin-left: 32%;
+            }
+            div{
+                border: 1px solid black;
+                display: inline-block;
+                
+            }
+
+            .box{
+                width: 33px;
+                height: 15px;
+                display: inline-block;
+                margin: 0px;
+                padding: 15px;
+                text-align: center;
+                color: cornsilk;
+                font-size: 1.4rem;
+            
+            }
+
+
+            .img1{
+                height: 60px;
+                width: 60px;
+            }
+
+            .img2{
+                height: 60px;
+                width: 60px;
+            
+            }
+
+            .snake1{
+                position: absolute;
+                top: 302px;
+                left: 500px;
+                height: 170px;
+                width: 130px;
+                z-index: 1;
+                
+            }
+            .snake2{
+                position: absolute;
+                top: 337px;
+                left: 317px;
+                height: 120px;
+                width: 80px;
+                z-index: 1;
+                
+            }
+            .snake3{
+                position: absolute;
+                top: 54px;
+                left: 350px;
+                height: 390px;
+                width: 200px;
+                z-index: 1;
+                
+            }
+            .snake4{
+                position: absolute;
+                top: 310px;
+                left: 730px;
+                height: 170px;
+                width: 144px;
+                z-index: 1;
+                
+            }
+
+            .snake5{
+                position: absolute;
+                top: 160px;
+                left: 780px;
+                height: 130px;
+                width: 140px;
+                z-index: 1;
+                
+            }
+
+            .snake6{
+                position: absolute;
+                top: 160px;
+                left: 390px;
+                height: 140px;
+                width: 140px;
+                z-index: 1;
+                
+            }
+
+            .lad1{
+                position: absolute;
+                top: 280px;
+                left: 430px;
+                height: 230px;
+                width: 120px;
+                z-index: 1;
+                transform: rotate(20deg);
+            }
+
+            
+            .lad2{
+                position: absolute;
+                top: 140px;
+                left: 630px;
+                height: 140px;
+                width: 50px;
+                z-index: 1;
+            }
+
+            
+            .lad3{
+                position: absolute;
+                top: 120px;
+                left: 780px;
+                height: 120px;
+                width: 120px;
+                z-index: 1;
+                transform: rotate(-20deg);
+            }
+
+            
+            .lad4{
+                position: absolute;
+                top: 359px;
+                left: 610px;
+                height: 120px;
+                width: 120px;
+                z-index: 1;
+                transform: rotate(20deg);
+            }
+
+            .lad5{
+                position: absolute;
+                top: 180px;
+                left: 250px;
+                height: 200px;
+                width: 190px;
+                z-index: 1;
+            }
+
+            .red{
+                background-color: rgba(255, 0, 0, 0.541);
+            }
+
+            .pink{
+                background-color: rgba(228, 21, 183, 0.432);
+            }
+
+            .green{
+                background-color: rgba(0, 128, 0, 0.459);
+            }
+
+            .blue{
+                background-color: rgba(0, 0, 255, 0.5);
+            }
+
+            #back{
+                margin-left:19% ;
+                width:690px;
+                height:470px;
+                padding: 1%;
+                position: absolute;
+            }
+
+
+            .p{
+                background-image: url(player1.png);
+                
+                
+
+            }
+            .q{
+                background-image: url(player2.jpg);
+            }
+
+            #message{
+                display: block;
+                height:12px;
+                width: 35%;
+                top:89%;
+                left: 27%;
+                position: absolute;
+            }
+
+
+            .throw1{
+
+            }
+
+
+            .throw2{
+                
+               
+            }
+
+            .start1{
+                width: 33px;
+                height: 15px;
+                display: inline-block;
+                margin: 0px;
+                padding: 15px;
+                text-align: center;
+                color: cornsilk;
+                font-size: 1.4rem;
+            
+            
+            }
+            .start2{
+                width: 33px;
+                height: 15px;
+                display: inline-block;
+                margin: 0px;
+                padding: 15px;
+                text-align: center;
+                color: cornsilk;
+                font-size: 1.4rem;
+            
+            
+            }
+
+            .p1area{
+                width:14%;
+                top:20%;
+                text-align: center;
+                position: absolute;
+              
+
+            }
+
+            .p2area{
+                left:80%;
+                width: 14%;
+                top:20%;
+                position: absolute;
+                text-align: center;
+
+            }
+
+            .startarea{
+                position: absolute;
+                text-align: center;
+                top: 68%;
+            }
+
+            .hide{
+                visibility: hidden;
+            }
+
+            #winner{
+                font-size: 1.3rem;
+                text-align: center;
+            }
+
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <h1>Aman's Snakes & Ladders</h1>
+
+    <div id="back">
+        <div class="box red" id="100">100</div>
+        <div class="box green" id="99">99</div>
+        <div class="box pink" id="98">98</div>
+        <div class="box blue" id="97">97</div>
+        <div class="box red" id="96">96</div>
+        <div class="box green" id="95">95</div>
+        <div class="box pink" id="94">94</div>
+        <div class="box blue" id="93">93</div>
+        <div class="box red" id="92">92</div>
+        <div class="box green" id="91">91</div>
+
+        <br>
+
+        <div class="box pink" id="81">81</div>
+        <div class="box blue" id="82">82</div>
+        <div class="box red" id="83">83</div>
+        <div class="box green" id="84">84</div>
+        <div class="box pink" id="85">85</div>
+        <div class="box blue" id="86">86</div>
+        <div class="box red" id="87">87</div>
+        <div class="box green" id="88">88</div>
+        <div class="box pink" id="89">89</div>
+        <div class="box blue" id="90">90</div>
+
+        <br>
+
+        <div class="box red" id="80">80</div>
+        <div class="box green" id="79">79</div>
+        <div class="box pink" id="78">78</div>
+        <div class="box blue" id="77">77</div>
+        <div class="box red" id="76">76</div>
+        <div class="box green" id="75">75</div>
+        <div class="box pink" id="74">74</div>
+        <div class="box blue" id="73">73</div>
+        <div class="box red" id="72">72</div>
+        <div class="box green" id="71">71</div>
+
+        <br>
+
+        <div class="box pink" id="61">61</div>
+        <div class="box blue" id="62">62</div>
+        <div class="box red" id="63">63</div>
+        <div class="box green" id="64">64</div>
+        <div class="box pink" id="65">65</div>
+        <div class="box blue" id="66">66</div>
+        <div class="box red" id="67">67</div>
+        <div class="box green" id="68">68</div>
+        <div class="box pink" id="69">69</div>
+        <div class="box blue" id="70">70</div>
+
+        <br>
+
+        <div class="box red" id="60">60</div>
+        <div class="box green" id="59">59</div>
+        <div class="box pink" id="58">58</div>
+        <div class="box blue" id="57">57</div>
+        <div class="box red" id="56">56</div>
+        <div class="box green" id="55">55</div>
+        <div class="box pink" id="54">54</div>
+        <div class="box blue" id="53">53</div>
+        <div class="box red" id="52">52</div>
+        <div class="box green" id="51">51</div>
+
+        <br>
+
+        <div class="box pink" id="41">41</div>
+        <div class="box blue" id="42">42</div>
+        <div class="box red" id="43">43</div>
+        <div class="box green" id="44">44</div>
+        <div class="box pink" id="45">45</div>
+        <div class="box blue" id="46">46</div>
+        <div class="box red" id="47">47</div>
+        <div class="box green" id="48">48</div>
+        <div class="box pink" id="49">49</div>
+        <div class="box blue" id="50">50</div>
+
+        <br>
+
+        <div class="box red" id="40">40</div>
+        <div class="box green" id="39">39</div>
+        <div class="box pink" id="38">38</div>
+        <div class="box blue" id="37">37</div>
+        <div class="box red" id="36">36</div>
+        <div class="box green" id="35">35</div>
+        <div class="box pink" id="34">34</div>
+        <div class="box blue" id="33">33</div>
+        <div class="box red" id="32">32</div>
+        <div class="box green" id="31">31</div>
+
+        <br>
+
+        <div class="box pink" id="21">21</div>
+        <div class="box blue" id="22">22</div>
+        <div class="box red" id="23">23</div>
+        <div class="box green" id="24">24</div>
+        <div class="box pink" id="25">25</div>
+        <div class="box blue" id="26">26</div>
+        <div class="box red" id="27">27</div>
+        <div class="box green" id="28">28</div>
+        <div class="box pink" id="29">29</div>
+        <div class="box blue" id="30">30</div>
+
+        <br>
+        
+        <div class="box red" id="20">20</div>
+        <div class="box green" id="19">19</div>
+        <div class="box pink" id="18">18</div>
+        <div class="box blue" id="17">17</div>
+        <div class="box red" id="16">16</div>
+        <div class="box green" id="15">15</div>
+        <div class="box pink" id="14">14</div>
+        <div class="box blue" id="13">13</div>
+        <div class="box red" id="12">12</div>
+        <div class="box green" id="11">11</div>
+
+        <br>
+
+        <div class="box pink" id="1">1</div>
+        <div class="box blue" id="2">2</div>
+        <div class="box red" id="3">3</div>
+        <div class="box green" id="4">4</div>
+        <div class="box pink" id="5">5</div>
+        <div class="box blue" id="6">6</div>
+        <div class="box red" id="7">7</div>
+        <div class="box green" id="8">8</div>
+        <div class="box pink" id="9">9</div>
+        <div class="box blue" id="10">10</div>
+
+    </div>
+
+
+
+        
+        
+        <img class="snake1" src="snake1.png" alt="">
+
+        <img class="snake2" src="snake2.png" alt="">
+
+        <img class="snake3" src="snake3.png" alt="">
+
+        <img class="snake4" src="snake4.png" alt="">
+
+        <img class="snake5" src="snake5.png" alt="">
+
+        <img class="snake6" src="snake6.png" alt="">
+
+
+        <img class="lad1" src="lad1.png" alt="">
+
+        <img class="lad2" src="lad2.png" alt="">
+
+        <img class="lad3" src="lad3.png" alt="">
+
+        <img class="lad4" src="lad4.png" alt="">
+
+        <img class="lad5" src="lad5.png" alt="">
+
+        
+
+
+       
+
+        <div id="message" style="height: 60px; width: 500px;">
+            <p id="winner" class="pink">All good</p>
+        </div>
+
+        <div class="p1area">
+
+        <div>Player1</div>
+        <br><br><br>
+        <img class="img1" src="dice1.png">
+
+        <br><br>
+
+
+        <button class="throw1" onclick="dice1()">Throw</button>
+
+        <br><br>
+    </div>
+
+
+    <div class="p2area">
+        <div>Player2</div>
+        <br><br><br>
+
+        <img class="img2" src="dice1.png">
+
+        <br><br>
+        <button class="throw2" onclick="dice2()">Throw</button>
+        
+    </div>
+
+<div class="startarea"><h2>Start </h2> 
+        <div class="p start1"></div>
+        <div class="q start2"></div>
+   
+    </div>
+
+    </body>
+
+
+<script>
+    
+    var counter1=0;
+    var first1=0;
+    var counter2=0;
+    var first2=0;
+    var wait=0;
+    chance=1;
+
+    function dice1(){
+        if(chance==2)
+        {
+            document.getElementById("winner").classList.remove("pink");
+            document.getElementById("winner").classList.add("red");
+            document.getElementById("winner").innerText="Wait for your turn";
+            wait=1;
+            return;
+        }
+
+        if(wait==1)
+        {
+            document.getElementById("winner").classList.remove("red");
+            document.getElementById("winner").classList.add("pink");
+            document.getElementById("winner").innerText="All good";
+            wait=0;
+
+        }
+        chance=2;
+
+        if(first1==0)
+        {
+            
+            document.getElementsByClassName("start1")[0].classList.add("hide");
+        }
+        if(first1>0 || counter1+p<=100)
+        {
+        document.getElementById(counter1).classList.remove("p");
+        
+        }
+        first1=1;
+        var p=Math.floor(Math.random()*6) +1;
+        document.querySelector(".img1").setAttribute("src","dice"+p+".png");
+        if(counter1+p>100)
+        {
+            return;
+        }
+        else if(counter1+p==100)
+        {
+            document.getElementById("winner").classList.add("green");
+            document.getElementById("winner").innerText="Congratulations! Player 1 is the winner";
+        }
+
+
+        // var pw=0
+        // pw=w(counter1,counter1+p);
+        // while(pw==0)
+        // {
+
+        // }
+
+
+
+
+        counter1=counter1+p;
+
+        if(counter1==counter2)
+        {
+            document.getElementById(counter2).classList.remove("q");
+            counter2=0;
+            document.getElementsByClassName("start2")[0].classList.remove("hide");
+            chance=1;
+            first2=0;
+        }
+        else if(counter1==18)
+        {
+            counter1=44;
+        }
+        else if(counter1==15)
+        {
+            counter1=34;
+        }
+        else if(counter1==39)
+        {
+            counter1=80;
+        }
+        else if(counter1==55)
+        {
+            counter1=86;
+        }
+        else if(counter1==69)
+        {
+            counter1=88;
+        }
+        else if(counter1==99)
+        {
+            counter1=24;
+        }
+        else if(counter1==77)
+        {
+            counter1=58;
+        }
+        else if(counter1==73)
+        {
+            counter1=51;
+        }
+        else if(counter1==45)
+        {
+            counter1=17;
+        }
+        else if(counter1==48)
+        {
+            counter1=14;
+        }
+        else if(counter1==40)
+        {
+            counter1=22;
+        }
+
+        if(counter1==counter2)
+        {
+            document.getElementById(counter2).classList.remove("q");
+            counter2=0;
+            document.getElementsByClassName("start2")[0].classList.remove("hide");
+            chance=1;
+            first2=0;
+        }
+       
+
+
+
+        document.getElementById(counter1).classList.add("p");
+        console.log(p);
+        console.log("c="+counter1);
+        
+    }
+
+
+
+        
+    function dice2(){
+        if(chance==1)
+        {
+            document.getElementById("winner").classList.remove("pink");
+            document.getElementById("winner").classList.add("red");
+            document.getElementById("winner").innerText="Wait for your turn";
+            wait=1;
+            return;
+        }
+        chance=1;
+        if(wait==1)
+        {
+            wait=0;
+            document.getElementById("winner").classList.remove("red");
+            document.getElementById("winner").classList.add("pink");
+            document.getElementById("winner").innerText="All good";
+        }
+        if(first2==0)
+        {
+          
+            document.getElementsByClassName("start2")[0].classList.add("hide");
+        }
+
+        if(first2>0 || counter2+q<=100)
+        {
+        document.getElementById(counter2).classList.remove("q");
+        
+        }
+        first2=1;
+        var q=Math.floor(Math.random()*6) +1;
+        document.querySelector(".img2").setAttribute("src","dice"+q+".png");
+        if(counter2+q>100)
+        {
+            return;
+        }
+        else if(counter2+q==100)
+        {
+            document.getElementById("winner").classList.add("green");
+            document.getElementById("winner").innerText="Congratulations! Player2 is the  winner";
+        }
+        counter2=counter2+q;
+
+        if(counter2==counter1)
+        {
+            document.getElementById(counter1).classList.remove("p");
+            counter1=0;
+            document.getElementsByClassName("start1")[0].classList.remove("hide");
+            chance=2;
+            first1=0;
+        }
+        else if(counter2==18)
+        {
+            counter2=44;
+        }
+        else if(counter2==15)
+        {
+            counter2=34;
+        }
+        else if(counter2==39)
+        {
+            counter2=80;
+        }
+        else if(counter2==55)
+        {
+            counter2=86;
+        }
+        else if(counter2==69)
+        {
+            counter2=88;
+        }
+        else if(counter2==99)
+        {
+            counter2=24;
+        }
+        else if(counter2==77)
+        {
+            counter2=58;
+        }
+        else if(counter2==73)
+        {
+            counter2=51;
+        }
+        else if(counter2==45)
+        {
+            counter2=17;
+        }
+        else if(counter2==48)
+        {
+            counter2=14;
+        }
+        else if(counter2==40)
+        {
+            counter2=22;
+        }
+
+        if(counter2==counter1)
+        {
+            document.getElementById(counter1).classList.remove("p");
+            counter1=0;
+            document.getElementsByClassName("start1")[0].classList.remove("hide");
+            chance=2;
+            first1=0;
+        }
+        
+        document.getElementById(counter2).classList.add("q");
+        console.log(q);
+        console.log("c="+counter2);
+    }
+
+
+
+    // function w(i,f){
+    //     console.log("i="+i);
+    //     for(var g=i;g<=f;g++)
+    //     {
+    //     setTimeout(function(){
+    //         nextstep(i+1,f);
+    //     },1000)
+    // }
+    // if(g>f)
+    // return 1;
+
+    
+    // }
+
+    // function nextstep(i,f)
+    // {
+    //     document.getElementById(i-1).classList.remove("p");
+    //     document.getElementById(i).classList.add("p");
+
+    // }
+
+</script>
+
+</html>

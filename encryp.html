@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Application
+    </title>
+</head>
+<body>
+    <h1>Encryption</h1>
+    <input type="text" name="" id="keye"><br>
+    <textarea name="" id="text1" cols="50" rows="10"></textarea>
+    <button onclick="encrypt()">Encrypt</button>
+    <textarea name="" id="enctext" cols="50" rows="10"></textarea>
+
+    <br>
+    <h1>Decryption</h1>
+    <input type="text" name="" id="keyd"><br>
+    <textarea name="" id="text2" cols="50" rows="10"></textarea>
+    <button onclick="decrypt()">Decrypt</button>
+    <textarea name="" id="dectext" cols="50" rows="10"></textarea>
+
+
+    <script>
+        function encrypt(){
+            var key=document.getElementById("keye").value;
+            var text1=document.getElementById("text1").value;
+            key=key.replaceAll(" ","");
+            var l1=key.length;
+            var l2=text1.length;
+            var i=l1-1;
+            var p=0;
+            var newstr="";
+
+            while(true)
+            {
+                if(i==-1)
+                i=l1-1;
+                newstr=newstr+String.fromCharCode( key.charCodeAt(i) + text1.charCodeAt(p) + (p%127));
+                i--;
+                p++;
+                if(p==l2)
+                break;
+            }
+            document.getElementById("enctext").innerText=newstr;
+            console.log(newstr);
+        }
+
+        function decrypt(){
+            var key=document.getElementById("keyd").value;
+            var text2=document.getElementById("text2").value;
+            key=key.replaceAll(" ","");
+            var l1=key.length;
+            var l2=text2.length;
+            var i=l1-1;
+            var p=0;
+            var newstr="";
+
+            while(true)
+            {
+                if(i==-1)
+                i=l1-1;
+                newstr=newstr+String.fromCharCode(  text2.charCodeAt(p)- key.charCodeAt(i) - (p%127) );
+                i--;
+                p++;
+                if(p==l2)
+                break;
+            }
+            document.getElementById("dectext").innerText=newstr;
+            console.log(newstr);
+        }
+
+    </script>
+</body>
+</html>
