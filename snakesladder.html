@@ -517,11 +517,6 @@
             
             document.getElementsByClassName("start1")[0].classList.add("hide");
         }
-        if(first1>0 || counter1+p<=100)
-        {
-        document.getElementById(counter1).classList.remove("p");
-        
-        }
         first1=1;
         var p=Math.floor(Math.random()*6) +1;
         document.querySelector(".img1").setAttribute("src","dice"+p+".png");
@@ -529,7 +524,13 @@
         {
             return;
         }
-        else if(counter1+p==100)
+        if(first1>0 || counter1+p<=100)
+        {
+        document.getElementById(counter1).classList.remove("p");
+        
+        }
+        
+        if(counter1+p==100)
         {
             document.getElementById("winner").classList.add("green");
             document.getElementById("winner").innerText="Congratulations! Player 1 is the winner";
@@ -650,12 +651,6 @@
           
             document.getElementsByClassName("start2")[0].classList.add("hide");
         }
-
-        if(first2>0 || counter2+q<=100)
-        {
-        document.getElementById(counter2).classList.remove("q");
-        
-        }
         first2=1;
         var q=Math.floor(Math.random()*6) +1;
         document.querySelector(".img2").setAttribute("src","dice"+q+".png");
@@ -663,7 +658,14 @@
         {
             return;
         }
-        else if(counter2+q==100)
+        if(first2>0 || counter2+q<=100)
+        {
+        document.getElementById(counter2).classList.remove("q");
+        
+        }
+        
+        
+        if(counter2+q==100)
         {
             document.getElementById("winner").classList.add("green");
             document.getElementById("winner").innerText="Congratulations! Player2 is the  winner";
