@@ -1,0 +1,259 @@
+
+body{
+    position: relative;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto auto;
+    text-justify: auto;
+    margin-left: 32%;
+}
+div{
+    border: 1px solid black;
+    display: inline-block;
+    
+}
+
+.box{
+    width: 33px;
+    height: 15px;
+    display: inline-block;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+    color: cornsilk;
+    font-size: 1.4rem;
+
+}
+
+
+.img1{
+    height: 60px;
+    width: 60px;
+}
+
+.img2{
+    height: 60px;
+    width: 60px;
+
+}
+
+.snake1{
+    position: absolute;
+    top: 302px;
+    left: 493px;
+    height: 170px;
+    width: 130px;
+    z-index: 1;
+    
+}
+.snake2{
+    position: absolute;
+    top: 330px;
+    left: 315px;
+    height: 120px;
+    width: 80px;
+    z-index: 1;
+    
+}
+.snake3{
+    position: absolute;
+    top: 54px;
+    left: 350px;
+    height: 390px;
+    width: 200px;
+    z-index: 1;
+    
+}
+.snake4{
+    position: absolute;
+    top: 300px;
+    left: 730px;
+    height: 170px;
+    width: 144px;
+    z-index: 1;
+    
+}
+
+/* 73-51 */
+.snake5{
+    position: absolute;
+    top: 153px;
+    left: 780px;
+    height: 130px;
+    width: 140px;
+    z-index: 1;
+    
+}
+
+.snake6{
+    position: absolute;
+    top: 160px;
+    left: 390px;
+    height: 140px;
+    width: 140px;
+    z-index: 1;
+    
+}
+
+.lad1{
+    position: absolute;
+    top: 270px;
+    left: 420px;
+    height: 230px;
+    width: 120px;
+    z-index: 1;
+    transform: rotate(20deg);
+}
+
+
+
+/* 55-86 */
+.lad2{
+    position: absolute;
+    top: 120px;
+    left: 624px;
+    height: 140px;
+    width: 50px;
+    z-index: 1;
+}
+
+
+/* 69-88 */
+.lad3{
+    position: absolute;
+    top: 110px;
+    left: 766px;
+    height: 120px;
+    width: 120px;
+    z-index: 1;
+    transform: rotate(-20deg);
+}
+
+
+.lad4{
+    position: absolute;
+    top: 343px;
+    left: 610px;
+    height: 120px;
+    width: 120px;
+    z-index: 1;
+    transform: rotate(20deg);
+}
+
+.lad5{
+    position: absolute;
+    top: 170px;
+    left: 247px;
+    height: 200px;
+    width: 190px;
+    z-index: 1;
+}
+
+.red{
+    background-color: rgba(255, 0, 0, 0.541);
+}
+
+.pink{
+    background-color: rgba(228, 21, 183, 0.432);
+}
+
+.green{
+    background-color: rgba(0, 128, 0, 0.459);
+}
+
+.blue{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+#back{
+    margin-left:19% ;
+    width:690px;
+    height:470px;
+    padding: 1%;
+    position: absolute;
+}
+
+
+.p{
+    background-image: url(player1.png);
+    
+    
+
+}
+.q{
+    background-image: url(player2.jpg);
+}
+
+#message{
+    display: block;
+    height:12px;
+    width: 35%;
+    top:510px;
+    left: 27%;
+    position: relative;
+}
+
+
+
+
+.start1{
+    width: 33px;
+    height: 15px;
+    display: inline-block;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+    color: cornsilk;
+    font-size: 1.4rem;
+
+
+}
+.start2{
+    width: 33px;
+    height: 15px;
+    display: inline-block;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+    color: cornsilk;
+    font-size: 1.4rem;
+
+
+}
+
+.p1area{
+    width:14%;
+    top:50px;
+    text-align: center;
+    position: relative;
+  
+
+}
+
+.p2area{
+    left:850px;
+    width: 14%;
+    top:50px;
+    position: relative;
+    text-align: center;
+
+}
+
+.startarea{
+    position: relative;
+    text-align: center;
+    top: 258px;
+    left: -280px;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+#winner{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
